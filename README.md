@@ -1,8 +1,8 @@
-Here is your **README content**, formatted **exactly** like the “Gender and Age Detection” screenshot you provided — clean Markdown structure with clear headings, bullet points, and tree format:
+
 
 ---
 
-# 🩻 Identity-Mapping ResFormer: A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images
+# Identity-Mapping ResFormer: A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images
 
 This project implements a deep learning-based system to classify chest X-rays into four categories using a ResFormer-based identity-mapping transformer. Built with PyTorch and Flask, it provides a web interface for real-time inference and includes full training, evaluation, and deployment pipelines.
 
@@ -185,4 +185,3 @@ This project is released under the **MIT License**
 
 ---
 
-Let me know if you’d like this exported to a `.md` file or copied into your GitHub repo directly.
