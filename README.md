@@ -24,18 +24,19 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 ## Project Structure
 
 ```
-.
-├── app.py                # Flask application (local deployment)
-├── best_model.pth        # Trained & saved ResFormer weights
-├── requirements.txt      # Python dependencies
-├── test_environment.py   # Python version validator
-├── notebook.ipynb        # Data prep & training script
-├── uploads/              # Temporary storage for uploaded X‑rays
-├── templates/
-│   └── index.html        # Web UI template
-├── README.md             # Project documentation (this file)
-└── LICENSE               # Project license
-```
+
+└── Identity-Mapping ResFormer A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images/
+    ├── app.py                # Flask application (local deployment)
+    ├── best_model.pth        # Trained & saved ResFormer weights
+    ├── requirements.txt      # Python dependencies
+    ├── test_environment.py   # Python version validator
+    ├── notebook.ipynb        # Data prep & training script
+    ├── uploads/              # Temporary storage for uploaded X‑rays
+    ├── templates/
+    │   └── index.html        # Web UI template
+    ├── README.md             # Project documentation (this file)
+    └── LICENSE               # Project license
+
 
 ---
 
