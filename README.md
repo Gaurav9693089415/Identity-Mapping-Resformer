@@ -1,20 +1,24 @@
 
+# 🩻 Identity-Mapping ResFormer: A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images
 
 ---
 
-```markdown
-#  Identity‑Mapping ResFormer: A Computer‑Aided Diagnosis Model for Pneumonia X‑Ray Images
-
 ## Overview
-**Identity‑Mapping ResFormer** is a deep learning model designed to classify chest X‑rays into four categories:
+
+**Identity-Mapping ResFormer** is a deep learning model designed to classify chest X-rays into four categories:
+
 - **COVID**
 - **Viral Pneumonia**
 - **Lung Opacity**
 - **Normal**
 
-Built from scratch using PyTorch, the model employs an innovative ResFormer's identity‑mapping transformer architecture and is deployed locally via a Flask web app.
+Built from scratch using PyTorch, the model employs an innovative ResFormer's identity-mapping transformer architecture and is optimized for medical image classification.
 
 ---
+
+## Project Structure
+
+
 
 ##  Project Structure
 ```
