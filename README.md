@@ -1,5 +1,10 @@
+Here is your **README content**, formatted **exactly** like the “Gender and Age Detection” screenshot you provided — clean Markdown structure with clear headings, bullet points, and tree format:
+
+---
 
 # 🩻 Identity-Mapping ResFormer: A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images
+
+This project implements a deep learning-based system to classify chest X-rays into four categories using a ResFormer-based identity-mapping transformer. Built with PyTorch and Flask, it provides a web interface for real-time inference and includes full training, evaluation, and deployment pipelines.
 
 ---
 
@@ -7,10 +12,10 @@
 
 **Identity-Mapping ResFormer** is a deep learning model designed to classify chest X-rays into four categories:
 
-- **COVID**
-- **Viral Pneumonia**
-- **Lung Opacity**
-- **Normal**
+* **COVID**
+* **Viral Pneumonia**
+* **Lung Opacity**
+* **Normal**
 
 Built from scratch using PyTorch, the model employs an innovative ResFormer's identity-mapping transformer architecture and is optimized for medical image classification.
 
@@ -18,34 +23,30 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 
 ## Project Structure
 
-
-
-##  Project Structure
 ```
-
 .
 ├── app.py                # Flask application (local deployment)
-├── best\_model.pth       # Trained & saved ResFormer weights
-├── requirements.txt     # Python dependencies
-├── test\_environment.py  # Python version validator
-├── notebook.ipynb       # Data prep & training script
-├── uploads/             # Temporary storage for uploaded X‑rays
+├── best_model.pth        # Trained & saved ResFormer weights
+├── requirements.txt      # Python dependencies
+├── test_environment.py   # Python version validator
+├── notebook.ipynb        # Data prep & training script
+├── uploads/              # Temporary storage for uploaded X‑rays
 ├── templates/
-│   └── index.html       # Web UI template
-├── README.md            # Project documentation (this file)
-└── LICENSE              # Project license
-
-````
+│   └── index.html        # Web UI template
+├── README.md             # Project documentation (this file)
+└── LICENSE               # Project license
+```
 
 ---
 
-##  Installation
+## Installation
 
 1. **Clone the repo & navigate in**
+
    ```bash
    git clone https://github.com/Gaurav9693089415/Identity-Mapping-Resformer
    cd Identity-Mapping-ResFormer
-````
+   ```
 
 2. **Create & activate a virtual environment (optional but recommended)**
 
@@ -69,7 +70,7 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 
 ---
 
-##  Usage
+## Usage
 
 ### 1. Train the Model (via `notebook.ipynb`)
 
@@ -77,15 +78,15 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 
 * **Run**: Execute the notebook cells to:
 
-  * Load and prepare the dataset.
-  * Define and train the `IdentityMappingResFormer`.
-  * Save the best model as `best_model.pth`.
+  * Load and prepare the dataset
+  * Define and train the `IdentityMappingResFormer`
+  * Save the best model as `best_model.pth`
 
 * **Plots generated**:
 
-  * Training loss curve.
-  * Validation accuracy trend.
-  * Confusion matrix heatmap.
+  * Training loss curve
+  * Validation accuracy trend
+  * Confusion matrix heatmap
 
 ### 2. Deploy Locally using Flask
 
@@ -93,8 +94,8 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 python app.py
 ```
 
-* Visit `http://localhost:5000` in your browser.
-* Upload an X‑ray image (`png`, `jpg`, etc.).
+* Visit `http://localhost:5000` in your browser
+* Upload an X‑ray image (`png`, `jpg`, etc.)
 * Get back:
 
   * **Predicted class** (COVID / Viral Pneumonia / Lung Opacity / Normal)
@@ -122,7 +123,7 @@ Sample JSON response:
 
 ---
 
-##  Dependencies
+## Dependencies
 
 All required packages are listed in `requirements.txt`:
 
@@ -139,7 +140,7 @@ Werkzeug==3.0.1
 
 ---
 
-##  Model Architecture
+## Model Architecture
 
 * **SimAM**: Spatial attention mechanism
 * **DWConv3x3**: Depthwise separable convolution
@@ -151,7 +152,7 @@ Werkzeug==3.0.1
 
 ---
 
-##  Evaluation Metrics
+## Evaluation Metrics
 
 After training, the model achieves (example results):
 
@@ -164,7 +165,7 @@ After training, the model achieves (example results):
 
 ---
 
-##  Development & Testing
+## Development & Testing
 
 * Ensure **Python 3.x** is used (`test_environment.py` enforces this)
 * Runs seamlessly on **CPU**
@@ -180,7 +181,8 @@ After training, the model achieves (example results):
 
 ## 📝 License
 
-This project is released under the **MIT License** 
+This project is released under the **MIT License**
 
 ---
 
+Let me know if you’d like this exported to a `.md` file or copied into your GitHub repo directly.
