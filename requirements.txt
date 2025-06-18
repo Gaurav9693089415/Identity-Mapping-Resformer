@@ -1,0 +1,8 @@
+Flask==3.0.0
+torch==2.4.1
+torchvision==0.19.1
+Pillow==10.4.0
+numpy==1.26.4
+albumentations==1.4.0
+einops==0.8.0
+Werkzeug==3.0.1
