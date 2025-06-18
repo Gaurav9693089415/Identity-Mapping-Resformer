@@ -1,16 +1,9 @@
 
-
 ---
 
 # Identity-Mapping ResFormer: A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images
 
-This project implements a deep learning-based system to classify chest X-rays into four categories using a ResFormer-based identity-mapping transformer. Built with PyTorch and Flask, it provides a web interface for real-time inference and includes full training, evaluation, and deployment pipelines.
-
----
-
-## Overview
-
-**Identity-Mapping ResFormer** is a deep learning model designed to classify chest X-rays into four categories:
+This project implements a deep learning model designed to classify chest X-rays into four categories:
 
 * **COVID**
 * **Viral Pneumonia**
@@ -24,69 +17,66 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 ## Project Structure
 
 ```
-
-└── Identity-Mapping ResFormer A Computer-Aided Diagnosis Model for Pneumonia X-Ray Images/
-    ├── app.py                # Flask application (local deployment)
-    ├── best_model.pth        # Trained & saved ResFormer weights
-    ├── requirements.txt      # Python dependencies
-    ├── test_environment.py   # Python version validator
-    ├── notebook.ipynb        # Data prep & training script
-    ├── uploads/              # Temporary storage for uploaded X‑rays
-    ├── templates/
-    │   └── index.html        # Web UI template
-    ├── README.md             # Project documentation (this file)
-    └── LICENSE               # Project license
-
+Identity-Mapping-ResFormer/
+├── app.py                # Flask application (local deployment)
+├── best_model.pth        # Trained & saved ResFormer weights
+├── requirements.txt      # Python dependencies
+├── test_environment.py   # Python version validator
+├── notebook.ipynb        # Data prep & training script
+├── uploads/              # Temporary storage for uploaded X-rays
+├── templates/
+│   └── index.html        # Web UI template
+├── README.md             # Project documentation (this file)
+└── LICENSE               # Project license
+```
 
 ---
 
 ## Installation
 
-1. **Clone the repo & navigate in**
+1. **Clone the repo & navigate into the project folder**
 
-   ```bash
-   git clone https://github.com/Gaurav9693089415/Identity-Mapping-Resformer
-   cd Identity-Mapping-ResFormer
-   ```
+```bash
+git clone https://github.com/Gaurav9693089415/Identity-Mapping-Resformer
+cd Identity-Mapping-Resformer
+```
 
 2. **Create & activate a virtual environment (optional but recommended)**
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # Mac/Linux
-   venv\Scripts\activate     # Windows
-   ```
+```bash
+python3 -m venv venv
+source venv/bin/activate      # For Mac/Linux
+venv\Scripts\activate         # For Windows
+```
 
-3. **Install dependencies**
+3. **Install the dependencies**
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-4. **Verify Python version**
+4. **Verify Python environment**
 
-   ```bash
-   python test_environment.py
-   ```
+```bash
+python test_environment.py
+```
 
 ---
 
 ## Usage
 
-### 1. Train the Model (via `notebook.ipynb`)
+### 1. Train the Model (`notebook.ipynb`)
 
-* **Prepare**: Adjust `zip_path` & `dataset_path` to your dataset.
-
-* **Run**: Execute the notebook cells to:
+* **Prepare**: Adjust `zip_path` & `dataset_path` to match your dataset locations.
+* **Run**: Execute the notebook to:
 
   * Load and prepare the dataset
   * Define and train the `IdentityMappingResFormer`
   * Save the best model as `best_model.pth`
-
-* **Plots generated**:
+* **Outputs**:
 
   * Training loss curve
-  * Validation accuracy trend
+  * Validation accuracy plot
   * Confusion matrix heatmap
 
 ### 2. Deploy Locally using Flask
@@ -95,15 +85,15 @@ Built from scratch using PyTorch, the model employs an innovative ResFormer's id
 python app.py
 ```
 
-* Visit `http://localhost:5000` in your browser
-* Upload an X‑ray image (`png`, `jpg`, etc.)
-* Get back:
+* Open your browser and visit: `http://localhost:5000`
+* Upload a chest X-ray image (`.png`, `.jpg`, etc.)
+* View:
 
-  * **Predicted class** (COVID / Viral Pneumonia / Lung Opacity / Normal)
-  * **Confidence score**
-  * **Full probability breakdown**
+  * Predicted class (COVID / Viral Pneumonia / Lung Opacity / Normal)
+  * Confidence score
+  * Full probability breakdown
 
-Sample JSON response:
+**Sample JSON Response:**
 
 ```json
 {
@@ -118,7 +108,7 @@ Sample JSON response:
       "Normal": 0.01
     }
   },
-  "image": "<base64‑encoded PNG>"
+  "image": "<base64-encoded PNG>"
 }
 ```
 
@@ -143,46 +133,47 @@ Werkzeug==3.0.1
 
 ## Model Architecture
 
-* **SimAM**: Spatial attention mechanism
-* **DWConv3x3**: Depthwise separable convolution
-* **MCCRM**: Multi‑channel convolution + residual mapping
-* **EMPT**: Convolution‑aware transformer block
-* **IMTM**: Identity‑Mapping Transformer module for feature fusion
-* **Backbone + Auxiliary network**: Hierarchical stages for feature extraction
-* **Final classification head**: Average pooling → Fully connected → 4‑class output
+* SimAM: Spatial attention mechanism
+* DWConv3x3: Depthwise separable convolution
+* MCCRM: Multi-channel convolution + residual mapping
+* EMPT: Convolution-aware transformer block
+* IMTM: Identity-Mapping Transformer module for feature fusion
+* Backbone + Auxiliary network: Hierarchical stages for feature extraction
+* Final classification head: Average pooling → Fully connected → 4-class output
 
 ---
 
 ## Evaluation Metrics
 
-After training, the model achieves (example results):
+Example evaluation results after training:
 
-* **Accuracy**: \~88.6%
-* **Precision**: \~0.90
-* **Recall**: \~0.89
-* **F1‑score**: \~0.895
-* **Specificity**: \~0.953
-* **Confusion Matrix**: Visualized via seaborn heatmap in the notebook
+* Accuracy: \~88.6%
+* Precision: \~0.90
+* Recall: \~0.89
+* F1-score: \~0.895
+* Specificity: \~0.953
+* Confusion Matrix: Visualized in the notebook using seaborn heatmap
 
 ---
 
 ## Development & Testing
 
-* Ensure **Python 3.x** is used (`test_environment.py` enforces this)
-* Runs seamlessly on **CPU**
-* Uses `albumentations` for data augmentation and `einops` for tensor reshaping
+* Ensure Python 3.x is used (`test_environment.py` validates this)
+* Runs on CPU (no GPU required)
+* Uses `albumentations` for augmentation and `einops` for tensor reshaping
 * Flask app handles:
 
   * Image validation
   * Preprocessing
-  * Prediction + confidence return
-  * Base64 encoding for client-side display
+  * Prediction with confidence
+  * Base64 encoding for web display
 
 ---
 
-## 📝 License
+## License
 
-This project is released under the **MIT License**
+This project is released under the **MIT License**.
 
 ---
+
 
